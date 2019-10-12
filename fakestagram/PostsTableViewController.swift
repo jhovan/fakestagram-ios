@@ -8,41 +8,13 @@
 
 import UIKit
 
-struct Post: Codable {
-    let id: Int?
-    let title: String
-    let imageUrl: String?
-    var likesCount: Int
-    var commentsCount: Int
-    let createdAt: String
-    var liked: Bool
-    let location: String
-
-    func likesCountText() -> String {
-        return "\(likesCount) likes"
-    }
-
-    func commentsCountText() -> String {
-        return "\(commentsCount) comments"
-    }
-
-    func load(_ image: @escaping (UIImage) -> Void) {
-        guard let urlString = imageUrl, let url = URL(string: urlString) else { return }
-        DispatchQueue.global(qos: .background).async {
-            if let data = try? Data(contentsOf: url), let img = UIImage(data: data) {
-                DispatchQueue.main.async { image(img) }
-            }
-        }
-    }
-}
-
 class PostsTableViewController: UITableViewController {
     static let cellId = "PostCell"
     var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPosts() { data in
+        loadPosts { data in
             DispatchQueue.main.async {
                 self.posts = data
                 self.tableView.reloadData()
@@ -94,7 +66,7 @@ class PostsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -113,31 +85,28 @@ class PostsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
-     
-    */
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "showPostSegue" {
-            let dest = segue.destination as! PostUIView
+            let dest = segue.destination as! PostViewController
             let idx = self.tableView.indexPathForSelectedRow?.row ?? 0
             dest.post = posts[idx]
         }
-    }
+     }
 
-    
     func loadPosts(successful: @escaping ([Post]) -> Void) {
-        var request = URLRequest(url: URL(string: "https://fakestagram-api.herokuapp.com/api/v1/posts")!)
+        let url = URL(string: "https://fakestagram-api.herokuapp.com/api/v1/posts")!
+        var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "get"
         request.addValue("Bearer f41af9b1-5a7e-4f0b-8c88-e44f686b1d2e", forHTTPHeaderField: "Authorization")
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
             if error != nil || data == nil {
                 return
             }
