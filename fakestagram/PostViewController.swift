@@ -8,17 +8,6 @@
 
 import UIKit
 
-struct Author: Codable {
-    let name: String
-}
-struct Comment: Codable {
-    let content: String
-    let author: Author?
-}
-struct Like: Codable {
-    let author: Author
-}
-
 class PostViewController: UIViewController {
     var post: Post? {
         didSet {
@@ -48,7 +37,6 @@ class PostViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -69,7 +57,6 @@ class PostViewController: UIViewController {
                 return
             }
             // get status code
-
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
@@ -109,4 +96,3 @@ class PostViewController: UIViewController {
         task.resume()
     }
 }
-
