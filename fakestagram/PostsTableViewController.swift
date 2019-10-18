@@ -10,10 +10,20 @@ import UIKit
 
 class PostsTableViewController: UITableViewController {
     static let cellId = "PostCell"
-    var posts = [Post]()
+    var posts: [Post]? {
+        didSet { self.tableView.reloadData() }
+    }
+    let client = RestClient<[Post]>(client: Client.fakestagram, basePath: "/api/v1/post")
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        client.show {[unowned self] data in
+            self.posts = data
+            self.tableView.reloadData()
+            
+        }
+        
         loadPosts { data in
             DispatchQueue.main.async {
                 self.posts = data
@@ -35,11 +45,12 @@ class PostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return posts?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostsTableViewController.cellId, for: indexPath)
+        guard let posts = self.posts else {return cell}
         posts[indexPath.row].load { img in
             cell.imageView?.contentMode = .scaleAspectFit
             cell.imageView?.image = img
@@ -94,7 +105,7 @@ class PostsTableViewController: UITableViewController {
         if segue.identifier == "showPostSegue" {
             let dest = segue.destination as! PostViewController
             let idx = self.tableView.indexPathForSelectedRow?.row ?? 0
-            dest.post = posts[idx]
+            dest.post = posts?[idx]
         }
      }
 

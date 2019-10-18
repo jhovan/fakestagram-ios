@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0E82AC40235143D500CB5244 /* RestClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82AC3F235143D500CB5244 /* RestClientTest.swift */; };
+		0E82D88A23523B7300843996 /* ShowPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D88823523B7300843996 /* ShowPostViewController.swift */; };
+		0E82D88B23523B7300843996 /* ShowPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E82D88923523B7300843996 /* ShowPostViewController.xib */; };
+		0E82D88D2352457900843996 /* AurthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D88C2352457900843996 /* AurthorView.swift */; };
+		0E82D88F2352459900843996 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D88E2352459900843996 /* Author.swift */; };
+		0E82D891235245A200843996 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D890235245A200843996 /* Comment.swift */; };
+		0E82D893235245AD00843996 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D892235245AD00843996 /* Like.swift */; };
 		0EF93EAA233FCB16008A5C0F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EA9233FCB16008A5C0F /* PostViewController.swift */; };
 		0EF93EAC2348019D008A5C0F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EAB2348019D008A5C0F /* Credentials.swift */; };
 		0EF93EAE23480392008A5C0F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EAD23480392008A5C0F /* Client.swift */; };
@@ -40,6 +46,12 @@
 
 /* Begin PBXFileReference section */
 		0E82AC3F235143D500CB5244 /* RestClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientTest.swift; sourceTree = "<group>"; };
+		0E82D88823523B7300843996 /* ShowPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPostViewController.swift; sourceTree = "<group>"; };
+		0E82D88923523B7300843996 /* ShowPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowPostViewController.xib; sourceTree = "<group>"; };
+		0E82D88C2352457900843996 /* AurthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AurthorView.swift; sourceTree = "<group>"; };
+		0E82D88E2352459900843996 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		0E82D890235245A200843996 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0E82D892235245AD00843996 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		0EF93EA9233FCB16008A5C0F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		0EF93EAB2348019D008A5C0F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		0EF93EAD23480392008A5C0F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -88,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E82D88723523B5700843996 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E82D88823523B7300843996 /* ShowPostViewController.swift */,
+				0E82D88923523B7300843996 /* ShowPostViewController.xib */,
+				0E82D88C2352457900843996 /* AurthorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0EF93EB023480769008A5C0F /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +123,9 @@
 			children = (
 				0EF93EC023491908008A5C0F /* Account.swift */,
 				0EF93EC223491989008A5C0F /* Post.swift */,
+				0E82D88E2352459900843996 /* Author.swift */,
+				0E82D890235245A200843996 /* Comment.swift */,
+				0E82D892235245AD00843996 /* Like.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +184,7 @@
 		E084FAD8233A8734009AC50D /* fakestagram */ = {
 			isa = PBXGroup;
 			children = (
+				0E82D88723523B5700843996 /* Views */,
 				0EF93EC423491A0E008A5C0F /* Network */,
 				0EF93EBF234918F6008A5C0F /* Models */,
 				0EF93EB023480769008A5C0F /* DataSource */,
@@ -269,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E82D88B23523B7300843996 /* ShowPostViewController.xib in Resources */,
 				E084FAE6233A8735009AC50D /* LaunchScreen.storyboard in Resources */,
 				E084FAE3233A8735009AC50D /* Assets.xcassets in Resources */,
 				E084FAE1233A8734009AC50D /* Main.storyboard in Resources */,
@@ -356,11 +383,16 @@
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
 				0EF93EC123491908008A5C0F /* Account.swift in Sources */,
 				E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */,
+				0E82D88D2352457900843996 /* AurthorView.swift in Sources */,
+				0E82D893235245AD00843996 /* Like.swift in Sources */,
+				0E82D88A23523B7300843996 /* ShowPostViewController.swift in Sources */,
 				0EF93EC323491989008A5C0F /* Post.swift in Sources */,
 				0EF93EB623482C5B008A5C0F /* StatusCode.swift in Sources */,
 				0EF93EAE23480392008A5C0F /* Client.swift in Sources */,
 				0EF93EAC2348019D008A5C0F /* Credentials.swift in Sources */,
+				0E82D88F2352459900843996 /* Author.swift in Sources */,
 				0EF93EBC2348F2CE008A5C0F /* RequestBuilder.swift in Sources */,
+				0E82D891235245A200843996 /* Comment.swift in Sources */,
 				0EF93EAA233FCB16008A5C0F /* PostViewController.swift in Sources */,
 				0EF93EB2234820CF008A5C0F /* HttpResponse.swift in Sources */,
 				0EF93EBE23491756008A5C0F /* RestClient.swift in Sources */,
