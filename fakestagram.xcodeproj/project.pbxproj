@@ -14,7 +14,13 @@
 		0E82D88F2352459900843996 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D88E2352459900843996 /* Author.swift */; };
 		0E82D891235245A200843996 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D890235245A200843996 /* Comment.swift */; };
 		0E82D893235245AD00843996 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D892235245AD00843996 /* Like.swift */; };
-		0EF93EAA233FCB16008A5C0F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EA9233FCB16008A5C0F /* PostViewController.swift */; };
+		0ED531A9235A817F0004DEAA /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531A7235A817F0004DEAA /* PostCollectionViewCell.swift */; };
+		0ED531AA235A817F0004DEAA /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED531A8235A817F0004DEAA /* PostCollectionViewCell.xib */; };
+		0ED531AF235B8F8C0004DEAA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531AE235B8F8C0004DEAA /* CameraViewController.swift */; };
+		0ED531B1235B8F9F0004DEAA /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531B0235B8F9F0004DEAA /* PostViewController.swift */; };
+		0ED531B3235B8FAA0004DEAA /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531B2235B8FAA0004DEAA /* PostsViewController.swift */; };
+		0ED531B6235B90370004DEAA /* UIDevice+models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531B5235B90370004DEAA /* UIDevice+models.swift */; };
+		0ED531B8235B904D0004DEAA /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531B7235B904D0004DEAA /* UIImage+Base64.swift */; };
 		0EF93EAC2348019D008A5C0F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EAB2348019D008A5C0F /* Credentials.swift */; };
 		0EF93EAE23480392008A5C0F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EAD23480392008A5C0F /* Client.swift */; };
 		0EF93EB2234820CF008A5C0F /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF93EB1234820CF008A5C0F /* HttpResponse.swift */; };
@@ -52,7 +58,13 @@
 		0E82D88E2352459900843996 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		0E82D890235245A200843996 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0E82D892235245AD00843996 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
-		0EF93EA9233FCB16008A5C0F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		0ED531A7235A817F0004DEAA /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		0ED531A8235A817F0004DEAA /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		0ED531AE235B8F8C0004DEAA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		0ED531B0235B8F9F0004DEAA /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		0ED531B2235B8FAA0004DEAA /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		0ED531B5235B90370004DEAA /* UIDevice+models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+models.swift"; sourceTree = "<group>"; };
+		0ED531B7235B904D0004DEAA /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		0EF93EAB2348019D008A5C0F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		0EF93EAD23480392008A5C0F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		0EF93EB1234820CF008A5C0F /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
@@ -106,8 +118,30 @@
 				0E82D88823523B7300843996 /* ShowPostViewController.swift */,
 				0E82D88923523B7300843996 /* ShowPostViewController.xib */,
 				0E82D88C2352457900843996 /* AurthorView.swift */,
+				0ED531A7235A817F0004DEAA /* PostCollectionViewCell.swift */,
+				0ED531A8235A817F0004DEAA /* PostCollectionViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0ED531AD235B8F430004DEAA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0ED531AE235B8F8C0004DEAA /* CameraViewController.swift */,
+				0ED531B0235B8F9F0004DEAA /* PostViewController.swift */,
+				0ED531B2235B8FAA0004DEAA /* PostsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0ED531B4235B8FFC0004DEAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0EF93EAB2348019D008A5C0F /* Credentials.swift */,
+				0ED531B5235B90370004DEAA /* UIDevice+models.swift */,
+				0ED531B7235B904D0004DEAA /* UIImage+Base64.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0EF93EB023480769008A5C0F /* DataSource */ = {
@@ -184,6 +218,8 @@
 		E084FAD8233A8734009AC50D /* fakestagram */ = {
 			isa = PBXGroup;
 			children = (
+				0ED531B4235B8FFC0004DEAA /* Utils */,
+				0ED531AD235B8F430004DEAA /* ViewControllers */,
 				0E82D88723523B5700843996 /* Views */,
 				0EF93EC423491A0E008A5C0F /* Network */,
 				0EF93EBF234918F6008A5C0F /* Models */,
@@ -195,8 +231,6 @@
 				E084FAE2233A8735009AC50D /* Assets.xcassets */,
 				E084FAE4233A8735009AC50D /* LaunchScreen.storyboard */,
 				E084FAE7233A8735009AC50D /* Info.plist */,
-				0EF93EA9233FCB16008A5C0F /* PostViewController.swift */,
-				0EF93EAB2348019D008A5C0F /* Credentials.swift */,
 			);
 			path = fakestagram;
 			sourceTree = "<group>";
@@ -299,6 +333,7 @@
 				E084FAE6233A8735009AC50D /* LaunchScreen.storyboard in Resources */,
 				E084FAE3233A8735009AC50D /* Assets.xcassets in Resources */,
 				E084FAE1233A8734009AC50D /* Main.storyboard in Resources */,
+				0ED531AA235A817F0004DEAA /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,20 +416,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E084FADA233A8734009AC50D /* AppDelegate.swift in Sources */,
+				0ED531AF235B8F8C0004DEAA /* CameraViewController.swift in Sources */,
 				0EF93EC123491908008A5C0F /* Account.swift in Sources */,
 				E084FAFC233A8888009AC50D /* PostsTableViewController.swift in Sources */,
 				0E82D88D2352457900843996 /* AurthorView.swift in Sources */,
 				0E82D893235245AD00843996 /* Like.swift in Sources */,
 				0E82D88A23523B7300843996 /* ShowPostViewController.swift in Sources */,
 				0EF93EC323491989008A5C0F /* Post.swift in Sources */,
+				0ED531B8235B904D0004DEAA /* UIImage+Base64.swift in Sources */,
 				0EF93EB623482C5B008A5C0F /* StatusCode.swift in Sources */,
+				0ED531B1235B8F9F0004DEAA /* PostViewController.swift in Sources */,
 				0EF93EAE23480392008A5C0F /* Client.swift in Sources */,
 				0EF93EAC2348019D008A5C0F /* Credentials.swift in Sources */,
 				0E82D88F2352459900843996 /* Author.swift in Sources */,
 				0EF93EBC2348F2CE008A5C0F /* RequestBuilder.swift in Sources */,
 				0E82D891235245A200843996 /* Comment.swift in Sources */,
-				0EF93EAA233FCB16008A5C0F /* PostViewController.swift in Sources */,
+				0ED531B3235B8FAA0004DEAA /* PostsViewController.swift in Sources */,
+				0ED531A9235A817F0004DEAA /* PostCollectionViewCell.swift in Sources */,
 				0EF93EB2234820CF008A5C0F /* HttpResponse.swift in Sources */,
+				0ED531B6235B90370004DEAA /* UIDevice+models.swift in Sources */,
 				0EF93EBE23491756008A5C0F /* RestClient.swift in Sources */,
 				E084FADC233A8734009AC50D /* SceneDelegate.swift in Sources */,
 			);

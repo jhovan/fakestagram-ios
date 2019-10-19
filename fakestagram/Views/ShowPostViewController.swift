@@ -9,13 +9,11 @@
 import UIKit
 
 class ShowPostViewController: UIViewController {
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var likeBttn: UIButton!
     @IBOutlet weak var commentBttn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,12 +24,12 @@ class ShowPostViewController: UIViewController {
     func onTapLike(_ sender: Any) {
         print("like")
     }
-    
+
     @IBAction
     func onTapCreateComment(_ sender: Any) {
         print("to comment")
     }
-    
+
     @IBAction
     func onTapShowComments(_ sender: Any) {
         print("to show comment")
@@ -39,7 +37,6 @@ class ShowPostViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
