@@ -14,6 +14,7 @@
 		0E82D88F2352459900843996 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D88E2352459900843996 /* Author.swift */; };
 		0E82D891235245A200843996 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D890235245A200843996 /* Comment.swift */; };
 		0E82D893235245AD00843996 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82D892235245AD00843996 /* Like.swift */; };
+		0EC343B92363D94500B87FCF /* CodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC343B82363D94500B87FCF /* CodableSerializer.swift */; };
 		0ED531A9235A817F0004DEAA /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531A7235A817F0004DEAA /* PostCollectionViewCell.swift */; };
 		0ED531AA235A817F0004DEAA /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED531A8235A817F0004DEAA /* PostCollectionViewCell.xib */; };
 		0ED531AF235B8F8C0004DEAA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED531AE235B8F8C0004DEAA /* CameraViewController.swift */; };
@@ -58,6 +59,7 @@
 		0E82D88E2352459900843996 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		0E82D890235245A200843996 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0E82D892235245AD00843996 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		0EC343B82363D94500B87FCF /* CodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSerializer.swift; sourceTree = "<group>"; };
 		0ED531A7235A817F0004DEAA /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED531A8235A817F0004DEAA /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		0ED531AE235B8F8C0004DEAA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF93EBD23491756008A5C0F /* RestClient.swift */,
+				0EC343B82363D94500B87FCF /* CodableSerializer.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				0E82D88D2352457900843996 /* AurthorView.swift in Sources */,
 				0E82D893235245AD00843996 /* Like.swift in Sources */,
 				0E82D88A23523B7300843996 /* ShowPostViewController.swift in Sources */,
+				0EC343B92363D94500B87FCF /* CodableSerializer.swift in Sources */,
 				0EF93EC323491989008A5C0F /* Post.swift in Sources */,
 				0ED531B8235B904D0004DEAA /* UIImage+Base64.swift in Sources */,
 				0EF93EB623482C5B008A5C0F /* StatusCode.swift in Sources */,

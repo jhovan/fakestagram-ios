@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadOrCreateAccount()
         return true
     }
 
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -30,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func loadOrCreateAccount() {
+        if Credentials.apiToken.get() != nil { return }
+        let account = Account(id: nil, name: "Nombre Apellido", deviceNumber: UIDevice.identifier, deviceModel: UIDevice.modelName)
+        let client = RestClient<Account>(client: Client.fakestagram, basePath: "/api/v1/accounts")
+        client.create(account) { account in
+            guard let account = account, let idx = account.id else { return }
+            _ = Credentials.apiToken.set(value: idx)
+        }
+    }
 
 }
-
